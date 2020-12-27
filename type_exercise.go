@@ -9,5 +9,6 @@ type Rope string
 func main() {
 	var name Rope
 	name = "Gospel"
-	fmt.Printf("My name is %s \n", name)
+	// t := &name[5]
+	fmt.Println(&name)
 }
