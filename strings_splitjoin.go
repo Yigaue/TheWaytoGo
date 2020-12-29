@@ -16,12 +16,12 @@ func main () {
 	}
 
 	str2 := "Go1|The ABC of Go|25"
-	s12 := Strings.Split(str2, "|")
+	s12 := strings.Split(str2, "|")
 	fmt.Printf("Splitted in slice: %v\n", s12)
 	for _, val := range s12 {
 		fmt.Printf("%s - ", val)
 	}
-	
+
 	fmt.Println()
 
 	str3 := strings.Join(s12, ";")
