@@ -4,6 +4,8 @@ import "fmt"
 
 import "runtime"
 
+var prompt = "Enter a digit, e.g 3"  + "or %s to quit. "
+
 func main () {
 
 	var checkNumber = 3 > 1
@@ -23,15 +25,34 @@ func main () {
 	}
 
 	println(runtime.GOOS)
-	
-	// var prompt = "Enter a digit, e.g 3"  + "or %s to quit. "
 
-	// func init() {
-	// 	if os  == "windows" {
-	// 		prompt  = fmt.Sprintf(promt, "Ctrl + Z, Enter")
+	 var abs = Abs(-8)
+	 fmt.Println(abs)
 
-	// 	} else {
-	// 		prompt = fmt.Sprintf(prompt, "Ctrl + D")
-	// 	}
-	// }
+	 println(isGreater(2, 5))
+}
+
+func init() {
+		if runtime.GOOS  == "windows" {
+			prompt = fmt.Sprintf(prompt, "Ctrl + Z, Enter")
+
+		} else {
+			prompt = fmt.Sprintf(prompt, "Ctrl + D")
+		}
+	}
+
+func Abs(x int) int {
+
+	if x < 0 {
+		return -x
+	}
+	return x
+}
+
+func isGreater(x, y int) bool {
+	if (x > y) {
+		return true
+	}
+
+	return false
 }
