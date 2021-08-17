@@ -38,6 +38,7 @@ func main() {
 	areaOfCircle, perimeterOfCircle := calculatePropertiesOfCircle(5, 3.143)
 
 	fmt.Println(areaOfCircle, perimeterOfCircle)
-
+	_, perimeterofCir := calculatePropertiesOfCircle(7, 9)
+	fmt.Println(perimeterofCir)
 
 }
