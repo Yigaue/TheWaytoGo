@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func maid() {
+func main() {
 	var n int16 = 34
 	var m int32
 	// m = n
