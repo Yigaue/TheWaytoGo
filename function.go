@@ -15,6 +15,13 @@ func calculatePropertiesOfRectangle(length, width float64) (float64, float64) {
 	return perimeter, area
 }
 
+func calculatePropertiesOfCircle(radius, pi float64) (area, perimeter float64) {
+	perimeter = 2 * pi * radius
+	area = pi * radius * radius
+
+	return
+}
+
 func main() {
 	price, no := 9000, 5
 	result := calculateBill(price, no)
@@ -23,4 +30,14 @@ func main() {
 
 	perimeter, area := calculatePropertiesOfRectangle(6, 4)
 	fmt.Println(perimeter, area)
+
+	/** Name Return Value
+
+	**/
+
+	areaOfCircle, perimeterOfCircle := calculatePropertiesOfCircle(5, 3.143)
+
+	fmt.Println(areaOfCircle, perimeterOfCircle)
+
+
 }
