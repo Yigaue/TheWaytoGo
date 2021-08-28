@@ -6,8 +6,8 @@ import (
 
 func main() {
 
-	finger := 5
-	fmt.Printf("My finger is %d: ", finger)
+	finger := 7
+//	fmt.Printf("Finger %d is ", finger)
 
 	switch finger {
 	case 1:
@@ -20,5 +20,24 @@ func main() {
 		fmt.Println("Ring")
 	case 5:
 		fmt.Println("Pinky")
+	default:
+		fmt.Println("Incorrect finger supplied")
+	}
+
+	letter := "i"
+	fmt.Printf("Letter %s is a ", letter)
+	switch letter {
+		case "a", "e", "i", "o", "u" :
+			fmt.Println("vowel") 
+		default: 
+			fmt.Println("Consonant")
+	}
+
+	num := 67
+	switch {
+		case num < 50:
+			fmt.Println("Number is less than 50")
+		case num > 50 && num < 100:
+			fmt.Println("Number is greater than 50 but less than 100")
 	}
 }
