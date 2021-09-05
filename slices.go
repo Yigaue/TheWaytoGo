@@ -12,4 +12,14 @@ func main() {
 	c := []int{5, 207, 54} // creates an array and return a slice reference
 
 	fmt.Println(c)
+
+	darray := [...]int{90, 50, 34, 94, 55, 42, 12}
+	dslice := darray[2:5]
+	fmt.Println("array before modification", darray)
+	fmt.Println("slice before modication", dslice)
+	for i := range dslice {
+		dslice[i]++
+	}
+	fmt.Println("array after modification", darray)
+	fmt.Println("slice after modication", dslice)
 }
