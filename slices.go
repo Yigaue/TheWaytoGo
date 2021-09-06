@@ -22,4 +22,16 @@ func main() {
 	}
 	fmt.Println("array after modification", darray)
 	fmt.Println("slice after modication", dslice)
+
+	numa := [3]int{76, 92, 97}
+	num1 := numa[:] // //creates a slice which contains all elements of the array
+	num2 := numa[:]
+	fmt.Println("Array before change 1", numa)
+	num1[0] = 100
+	fmt.Println("Array after modification to slice num1", numa)
+	num2[1] = 101
+	fmt.Println("Array after modification to slice num2", numa)
+	
+	fmt.Println(numa)
+	//Note: From the output, it's clear that when slices share the same array. The modifications made to the slice are reflected in the array.
 }
